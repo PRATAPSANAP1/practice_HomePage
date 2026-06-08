@@ -460,8 +460,9 @@ img { display: block; max-width: 100%; }
 
   /* Hero Section */
   .hero {
-    height: 25vh !important;
-    min-height: 25vh !important;
+    flex: 1 !important;
+    height: auto !important;
+    min-height: 0 !important;
     padding: 0 !important;
     background: url('assets/mobile-responsive.png') no-repeat center center !important;
     background-size: cover !important;
@@ -472,23 +473,23 @@ img { display: block; max-width: 100%; }
 
   /* Services Section */
   .services {
-    flex: 1 !important;
+    flex: 0 0 auto !important;
     height: auto !important;
-    padding: 15px 16px !important;
+    padding: 12px 16px !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: flex-start !important;
-    gap: 8px !important;
+    gap: 6px !important;
     border-top-left-radius: 20px !important;
     border-top-right-radius: 20px !important;
     overflow: hidden !important;
   }
   .section-title {
-    margin-bottom: 4px !important;
+    margin-bottom: 2px !important;
     gap: 6px !important;
   }
   .section-title h2 {
-    font-size: 1rem !important;
+    font-size: 0.95rem !important;
   }
   .section-title span {
     width: 20px !important;
@@ -498,10 +499,10 @@ img { display: block; max-width: 100%; }
   .service-grid {
     display: flex !important;
     flex-direction: column !important;
-    justify-content: space-between !important;
-    flex: 1 !important;
-    gap: 8px !important;
-    padding-top: 5px !important;
+    justify-content: flex-start !important;
+    flex: 0 0 auto !important;
+    gap: 6px !important;
+    padding-top: 2px !important;
   }
 
   /* Compact Card Design */
@@ -510,11 +511,11 @@ img { display: block; max-width: 100%; }
     align-items: center !important;
     justify-content: flex-start !important;
     gap: 12px !important;
-    padding: 8px 12px !important;
+    padding: 6px 12px !important;
     height: auto !important;
     min-height: 0 !important;
-    flex: 1 !important;
-    border-radius: 12px !important;
+    flex: 0 0 auto !important;
+    border-radius: 10px !important;
     overflow: hidden !important;
     box-shadow: 0 4px 10px rgba(64,123,255,.03) !important;
   }
@@ -530,11 +531,11 @@ img { display: block; max-width: 100%; }
   .icon {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
-    width: 30px !important;
-    height: 30px !important;
+    width: 28px !important;
+    height: 28px !important;
   }
   .card h1 {
-    font-size: 0.85rem !important;
+    font-size: 0.82rem !important;
     padding-right: 0 !important;
     margin-bottom: 0 !important;
   }
