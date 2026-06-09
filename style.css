@@ -115,7 +115,7 @@ img { display: block; max-width: 100%; }
 
 /* ── HERO 37vh ── */
 .hero {
-  height: 25vh;
+  height: 18vh;
   flex-shrink: 0;
   display: flex;
   align-items: center;
