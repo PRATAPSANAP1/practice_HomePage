@@ -621,9 +621,7 @@ img { display: block; max-width: 100%; }
     font-size: 0.75rem !important;
     gap: 6px !important;
   }
-  .f-contact p:first-child {
-    display: none !important; /* Hide long address */
-  }
+  
   .f-contact i {
     width: 20px !important;
     height: 20px !important;
