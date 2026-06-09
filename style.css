@@ -460,9 +460,9 @@ img { display: block; max-width: 100%; }
 
   /* Hero Section */
   .hero {
-    flex: 0 0 24vh !important;
-    height: 24vh !important;
-    min-height: 24vh !important;
+    flex: 0 0 26vh !important;
+    height: 26vh !important;
+    min-height: 26vh !important;
     padding: 0 !important;
     background: url('assets/mobile-responsive.png') no-repeat center center !important;
     background-size: cover !important;
@@ -599,7 +599,7 @@ img { display: block; max-width: 100%; }
   .f-copy {
     position: static !important;
     transform: none !important;
-    font-size: 1rem !important;
+    font-size: 0.70rem !important;
     color: #999 !important;
     margin-top: 2px !important;
   }
