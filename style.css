@@ -600,9 +600,7 @@ img { display: block; max-width: 100%; }
   .f-logo {
     font-size: 1rem !important;
   }
-  .f-sub {
-    display: none !important;
-  }
+  
   .social-links {
     margin-top: 0 !important;
     gap: 6px !important;
