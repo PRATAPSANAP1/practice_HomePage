@@ -79,6 +79,9 @@ img { display: block; max-width: 100%; }
   font-size: 1rem;
 }
 
+.mobile-text { display: none; }
+.desktop-text { display: inline; }
+
 /* ── NAVBAR 8vh ── */
 .navbar {
   height: 8vh;
@@ -440,6 +443,10 @@ img { display: block; max-width: 100%; }
     height: 8vh !important;
     padding: 0 16px !important;
   }
+  .logo img {
+    height: 44px !important;
+    width: 44px !important;
+  }
   .logo-tagline {
     display: none !important;
   }
@@ -451,8 +458,37 @@ img { display: block; max-width: 100%; }
     margin-left: auto !important;
   }
   .nav-auth .btn-primary {
-    padding: 6px 12px !important;
-    font-size: .75rem !important;
+    background: none !important;
+    color: #407BFF !important;
+    padding: 0 4px !important;
+    border-radius: 0 !important;
+    font-weight: 600 !important;
+    font-size: .8rem !important;
+    position: relative !important;
+    transition: none !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  .nav-auth .btn-primary:hover {
+    background: none !important;
+    transform: none !important;
+    color: #2563eb !important;
+  }
+  .nav-auth .btn-primary::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #407BFF;
+    transform-origin: bottom left;
+    transition: transform 0.25s ease-out;
+  }
+  .nav-auth .btn-primary:hover::after {
+    transform: scaleX(1);
+    background-color: #2563eb;
   }
   .nav-login {
     font-size: .78rem !important;
@@ -460,16 +496,18 @@ img { display: block; max-width: 100%; }
 
   /* Hero Section */
   .hero {
-    flex: 0 0 26vh !important;
-    height: 26vh !important;
-    min-height: 26vh !important;
+    flex: 0 0 24vh !important;
+    height: 24vh !important;
+    min-height: 24vh !important;
     padding: 0 !important;
     background: url('assets/mobile-responsive.png') no-repeat center center !important;
     background-size: cover !important;
   }
-.hero p {
+  .hero p, .hero .btn-secondary {
     display: none !important;
   }
+  .mobile-text { display: inline !important; }
+  .desktop-text { display: none !important; }
   /* Services Section */
   .services {
     flex: none !important;
@@ -599,8 +637,33 @@ img { display: block; max-width: 100%; }
   .f-copy {
     position: static !important;
     transform: none !important;
-    font-size: 0.70rem !important;
+    font-size: 1rem !important;
     color: #999 !important;
     margin-top: 2px !important;
   }
+}
+
+/* ── WHATSAPP FLOAT ── */
+.whatsapp-float {
+  position: fixed;
+  width: 56px;
+  height: 56px;
+  bottom: 24px;
+  right: 24px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 32px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+  color: #FFF;
 }
