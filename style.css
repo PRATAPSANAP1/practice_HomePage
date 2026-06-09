@@ -115,7 +115,7 @@ img { display: block; max-width: 100%; }
 
 /* ── HERO 37vh ── */
 .hero {
-  height: 18vh;
+  height: 37vh;
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -461,7 +461,7 @@ img { display: block; max-width: 100%; }
   /* Hero Section */
   .hero {
     flex: 1 !important;
-    height: auto !important;
+    height: 18vh;
     min-height: 0 !important;
     padding: 0 !important;
     background: url('assets/mobile-responsive.png') no-repeat center center !important;
