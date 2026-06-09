@@ -460,9 +460,9 @@ img { display: block; max-width: 100%; }
 
   /* Hero Section */
   .hero {
-    flex: 1 !important;
-    height: 18vh;
-    min-height: 0 !important;
+    flex: 0 0 18vh !important;
+    height: 18vh !important;
+    min-height: 18vh !important;
     padding: 0 !important;
     background: url('assets/mobile-responsive.png') no-repeat center center !important;
     background-size: cover !important;
@@ -472,7 +472,7 @@ img { display: block; max-width: 100%; }
   }
   /* Services Section */
   .services {
-    flex: 0 0 auto !important;
+    flex: 1 !important;
     height: auto !important;
     padding: 12px 16px !important;
     display: flex !important;
@@ -481,7 +481,7 @@ img { display: block; max-width: 100%; }
     gap: 6px !important;
     border-top-left-radius: 20px !important;
     border-top-right-radius: 20px !important;
-    overflow: hidden !important;
+    overflow-y: auto !important;
   }
   .section-title {
     margin-bottom: 2px !important;
@@ -499,9 +499,10 @@ img { display: block; max-width: 100%; }
     display: flex !important;
     flex-direction: column !important;
     justify-content: flex-start !important;
-    flex: 0 0 auto !important;
+    flex: 1 !important;
     gap: 6px !important;
     padding-top: 2px !important;
+    overflow-y: auto !important;
   }
 
   /* Compact Card Design */
