@@ -112,9 +112,40 @@ img { display: block; max-width: 100%; }
 .nav-links a:hover { color: #407BFF; }
 
 .nav-auth { display: flex; align-items: center; gap: 14px; margin-left: auto; }
-.nav-auth .btn-primary { padding: 8px 18px; font-size: .8rem; }
-.nav-login { color: #444; font-weight: 600; font-size: .82rem; transition: color .2s; }
-.nav-login:hover { color: #407BFF; }
+.nav-login, .nav-auth .btn-primary {
+  background: none !important;
+  color: #444 !important;
+  padding: 4px 0 !important;
+  border-radius: 0 !important;
+  font-weight: 600 !important;
+  font-size: .82rem !important;
+  position: relative !important;
+  transition: color .2s !important;
+  border: none !important;
+  box-shadow: none !important;
+  transform: none !important;
+  cursor: pointer !important;
+}
+.nav-login:hover, .nav-auth .btn-primary:hover {
+  background: none !important;
+  color: #407BFF !important;
+  transform: none !important;
+}
+.nav-login::after, .nav-auth .btn-primary::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #407BFF;
+  transform-origin: bottom left;
+  transition: transform 0.25s ease-out;
+}
+.nav-login:hover::after, .nav-auth .btn-primary:hover::after {
+  transform: scaleX(1);
+}
 
 /* ── HERO 24vh ── */
 .hero {
@@ -457,40 +488,7 @@ img { display: block; max-width: 100%; }
     gap: 10px !important;
     margin-left: auto !important;
   }
-  .nav-auth .btn-primary {
-    background: none !important;
-    color: #407BFF !important;
-    padding: 0 4px !important;
-    border-radius: 0 !important;
-    font-weight: 600 !important;
-    font-size: .8rem !important;
-    position: relative !important;
-    transition: none !important;
-    border: none !important;
-    box-shadow: none !important;
-  }
-  .nav-auth .btn-primary:hover {
-    background: none !important;
-    transform: none !important;
-    color: #2563eb !important;
-  }
-  .nav-auth .btn-primary::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: -4px;
-    left: 0;
-    background-color: #407BFF;
-    transform-origin: bottom left;
-    transition: transform 0.25s ease-out;
-  }
-  .nav-auth .btn-primary:hover::after {
-    transform: scaleX(1);
-    background-color: #2563eb;
-  }
-  .nav-login {
+  .nav-login, .nav-auth .btn-primary {
     font-size: .78rem !important;
   }
 
@@ -612,10 +610,10 @@ img { display: block; max-width: 100%; }
   }
   .f-contact {
     display: flex !important;
-    flex-direction: row !important;
-    justify-content: space-between !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
     width: 100% !important;
-    gap: 10px !important;
+    gap: 8px !important;
   }
   .f-contact p {
     font-size: 0.75rem !important;
